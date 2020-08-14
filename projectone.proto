@@ -1,0 +1,17 @@
+syntax="proto3";
+package projectone;
+
+option go_package="/project_lib";
+
+service Deal_Card{
+	rpc Deal (Name) returns (Person);
+}
+
+message Name{
+	string name=1;
+}
+
+message Person{
+	string name=1;
+	string card=2;
+}
